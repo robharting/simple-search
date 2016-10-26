@@ -2,3 +2,4 @@ components
 .idea
 npm-debug.log
 *.iml
+/.idea/
