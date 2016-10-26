@@ -22,17 +22,19 @@
                 test("search area appearing in static open", function(){
                     assert.equal(element.isOpen, true);
                     });
-                test("search event triggered", function(done){
+                test("search event triggered", function(){
                     //Then
                     element.addEventListener("search", function(e){
                         assert.equal(e.detail, "hello");
-                        done();
+//                        done();
                     });
 
                     //Given
+//                  element.root.querySelector("#searchInput").value = "hello";
                     Polymer.dom(element.root).querySelector("#searchInput").value = "hello";
                     //When
                     Polymer.dom(element.root).querySelector(".trigger-search paper-icon-button").click();
+//                    element.root.querySelector(".trigger-search paper-icon-button").click();
 
                 })
             });
